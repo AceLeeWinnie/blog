@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin-bottom: 2em;
+}
+
+body {
+  width: 600px;
+  margin: 2em auto;
+  padding: 0 2em;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei';
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+input, textarea{
+  color: #262a30;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  outline: none;
+}
+
+header {
+  padding: .5em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+nav {
+  position: fixed;
+  left: 15%;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  width: 9em;
+  text-align: right;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: .7em 1em;
+  color: #000;
+}
+
+nav a:hover{
+  background-color: #7ae8d8;
+  color: #f9f9f9;
+  -webkit-transition: color .2s linear;
+}
+
+.loginForm {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.loginForm input {
+  width: 200px;
+  height: 18px;
+  padding: 4px;
+}
+
+.loginForm label {
+  text-align: right;
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.loginInput {
+  margin: 10px;
+  text-align: center;
+}
+
+.loginInput input[type=submit] {
+  border: none;
+  /*width: 320px;*/
+  height: 30px;
+  font-size: 14px;
+  letter-spacing: .2em;
+  background-color: rgba(4, 156, 219, 1);
+  color: #fff;
+}
+
+.loginInput input[type=submit]:hover {
+  background-color: rgba(4, 156, 219, .8);
+}
+
+article {
+  font-size: 16px;
+  margin-top: 1.5em;
+  margin-bottom: 4em;
+}
+
+article h2 a{
+  color: #555;
+}
+
+.post {
+  color: #555;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.postForm label {
+  color: #999;
+  font-size: 12px;
+  margin: 0px 10px;
+}
+
+.postForm input {
+  border-radius: 3px;
+  height: 20px;
+  padding: 1px 1px 1px 4px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.postTitle .postTag .postBody {
+  margin-bottom: 100px;
+}
+
+.postTitle input {
+  width: 540px;
+}
+
+.postTag input {
+  width: 50px;
+}
+
+.postForm textarea {
+  resize: none;
+  padding: 10px;
+  width: 600px;
+  box-sizing: border-box;
+}
+
+.postForm input[type=submit] {
+  margin: 10px;
+  border: none;
+  width: 68px;
+  height: 30px;
+  font-size: 14px;
+  letter-spacing: .2em;
+  background-color: rgba(4, 156, 219, 1);
+  color: #fff;
+}
+
+.postForm input[type=submit]:hover {
+  background-color: rgba(4, 156, 219, .8);
+}
+
+.info {
+  color: #999;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.edit {
+  margin: 3px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background-color: #f3f3f3;
+  font-size: 13px;
+}
+
+.edit:hover {
+  text-decoration: none;
+  background-color: #ccc;
+  color: #fff;
+  -webkit-transition: color .2s linear;
+}
+
+.archive {
+  list-style: none;
+  line-height: 28px;
+}
+
+.archive h3 {
+  margin: 0.5em 0;
+}
+
+.archive time {
+  float: left;
+  font-size: 14px;
+  color: #999;
+  margin-right: 1.2em;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 8px;
+  background-color: #c795ff;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #fff;
+  padding: 0 5px;
+  margin: 8px 5px;
+}
+
+.tag:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #c795ff;
+  font-weight: bolder;
+  -webkit-transition: color .2s linear;
+}
+
+.tag-list {
+  padding: 10px;
+}
+
+.search {
+  border: none;
+  width: 100%;
+  font-size: 1em;
+  margin: .5em 0;
+}
+
+.prepage a, .nextpage a {
+  float: left;
+  text-decoration: none;
+  padding: .5em 1em;
+  color: #f9f9f9;
+  background-color: #ff9a9a;
+  font-weight: bold;
+}
+
+.nextpage a {
+  float: right;
+}
+
+.prepage a:hover, .nextpage a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 154, 154, 0.8);
+  transition: background-color .2s linear;
+}
+
+.comment {
+  border-top: 1px dotted #ccc;
+  padding: 20px 10px;
+}
+
+.commentForm {
+  border-top: 1px dotted #ccc;
+  padding-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+.commentForm textarea {
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.commentForm label {
+  /*padding: 5px 18px;*/
+  margin-right: .5em;
+}
+
+.commentForm input {
+  width: 284px;
+  height: 26px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: .5em;
+}
+
+.commentSubmit {
+  height: 42px;
+}
+
+.commentSubmit input[type=submit] {
+  height: 28px;
+  width: 88px;
+  color: #262a30;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #c7d4e1;
+  padding: 5px 18px;
+  font-size: 12px;
+}
+
+.commentSubmit input[type=submit]:hover {
+  background-color: #00a3cf;
+}
+
+.l_head {
+  float: left;
+  margin-left: -4em;
+  box-shadow: 0 1px 4px #888;
+}
+
+.r_head {
+  float: right;
+  margin-top: -2.5em;
+  box-shadow: 0 1px 4px #888;
+}
+
+.links a {
+  color: #0074a2;
+  text-decoration: underline;
+}
+
+.links a:hover {
+  color: #1e8cbe;
+}

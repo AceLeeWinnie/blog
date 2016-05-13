@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  if success
+    div= success
+  if error
+    div= error
+  each post, index in posts
+    article
+      h2
+        a(href='/u/'+post.name)
+          //- img.r_head(src=post.avator)
+          img(src=post.avator)
+        a(href='/u/'+post.name+'/'+post.time.day+'/'+post.title)= post.title
+      p.info
+        span 作者：
+          a(href='/u/'+post.name)= post.name
+          | &nbsp;|&nbsp;
+        span 日期：#{post.time && post.time.minute}
+          | &nbsp;|&nbsp;
+        span 标签：
+          - var flag = 0
+          if post.tags
+            each tag in post.tags
+              if tag!==''
+                - flag = 1
+                a.tag(href='/tags/'+tag)= tag
+          if !flag
+            | 无
+        if post.reprint_info&&post.reprint_info.reprint_from
+          br
+          a(href='/u/'+post.reprint_info.reprint_from.name+'/'+post.reprint_info.reprint_from.day+'/'+post.reprint_info.reprint_from.title) 原文链接
+      p.info
+        span 阅读: #{post.pv || 0} &nbsp;|&nbsp;
+        span 评论： #{post.comments && post.comments.length || 0}
+        if (post.reprint_info)
+          &nbsp;|&nbsp;
+          span 转载： #{post.reprint_info.reprint_to && post.reprint_info.reprint_to.length || 0}
+  include ./paging

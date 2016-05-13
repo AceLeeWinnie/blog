@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  form.loginForm(method='post')
+    .loginInput
+      label(for='username') 用户名
+      input(type='text' name='name')
+    .loginInput
+      label(for='password') 密码
+      input(type='password' name='password')
+    .loginInput
+      label(for='password_repeat') 确认密码
+      input(type='password' name='password_repeat')
+    .loginInput
+      label(for='email') 邮箱
+      input(type='email' name='email')
+    .loginInput
+      input(type='submit' value='注册')

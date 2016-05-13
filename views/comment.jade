@@ -1,0 +1,37 @@
+
+- var comments = post.comments
+if comments
+  each comment in comments
+    .comment
+      p
+        //- img.l_head(src=post.avator)
+        img(src=comment.avator)
+        a(href=comment.website) #{comment.name}
+        span.info 回复于 #{comment.time}
+      p!= comment.content
+
+form.commentForm(method='post')
+  if user
+    .commentInput
+      label(for='name') 姓名
+      input(type='text' name='name' value=user.name)
+    .commentInput
+      label(for='email') 邮箱
+      input(type='text' name='email' value=user.email)
+    .commentInput
+      label(for='website') 网址
+      input(type='text' name='website' value='/u/'+user.name)
+  else
+    .commentInput
+      label(for='name') 姓名
+      input(type='text' name='name')
+    .commentInput
+      label(for='email') 邮箱
+      input(type='text' name='email')
+    .commentInput
+      label(for='website') 网址
+      input(type='text' name='website' value='http://')
+  textarea(name='content' placeholder='留下你的足迹👣...')
+  .commentSubmit
+    input(type='submit' value='留言')
+

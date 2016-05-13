@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  article
+    each post, index in posts
+      h2
+        a(href='/u/'+post.name+'/'+post.time.day+'/'+post.title)= post.title
+      p.info
+        span 作者：
+          a(href='/u/'+post.name)= post.name
+        span 日期：#{post.time && post.time.minute}
+        span 标签：
+          if post.tags
+            each tag in post.tags
+              a.tag(href='/tags/'+tag)= tag
+        if post.reprint_info.reprint_from
+          br
+          a(href='/u/'+post.reprint_info.reprint_from.name+'/'+post.reprint_info.reprint_from.day+'/'+post.reprint_info.reprint_from.title) 原文链接
+      //- p!= post.post
+  include ./paging
+

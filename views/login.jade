@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form.loginForm(method='post')
+    .loginInput
+      label(for='username') 用户名
+      input(type='text' name='name' placeholder='昵称')
+    .loginInput
+      label(for='password') 密码
+      input(type='password' name='password' placeholder='密码')
+    .loginInput
+      input(type='submit' value='登录')

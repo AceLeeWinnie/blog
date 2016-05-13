@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  form.postForm(method='post')
+    .postTitle
+      label(for='title') 标题
+      input(type='text' name='title')
+    .postBody
+      label(for='content') 正文
+      textarea(name='content' rows='20' cols='100')
+    .postTag
+      label(for='tag') 标签
+      input(type='text' name='tag1')
+      input(type='text' name='tag2')
+      input(type='text' name='tag3')
+    input(type='submit' value='发表')

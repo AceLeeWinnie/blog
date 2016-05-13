@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  ul.archive
+    - var lastYear = 0
+    each post, index in posts
+      if (lastYear !== post.time.year)
+        li
+          h3= post.time.year
+          - lastYear = post.time.year
+      li
+        time= post.time.day
+      li
+        a(href='/u/'+post.name+'/'+post.time.day+'/'+post.title)= post.title
+        if user.name===post.name
+          a.edit(href='/remove/'+post.name+'/'+post.time.day+'/'+post.title) 删除
+

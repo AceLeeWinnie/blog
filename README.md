@@ -1,0 +1,2 @@
+# blog
+Granduation Design
